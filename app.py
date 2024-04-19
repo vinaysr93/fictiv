@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+
 from PIL import Image
 from fastbook import load_learner
 import tempfile
@@ -13,7 +13,7 @@ def overlay_image(image1,image2,alpha,x,y,rotation,re_size):
     image2=image2.rotate(rotation)
     image2=image2.resize(re_size)
 
-    trans=int(alpha*255)
+    trans=int(alpha*255) # controlling the tranperency
     image2.putalpha(trans)
 
     image1.paste(image2,mask=image2,box=[x,y])
@@ -23,7 +23,7 @@ def overlay_image(image1,image2,alpha,x,y,rotation,re_size):
 def main_loop():
         
 
-    
+    st.subheader("CAD Model and Actual Model Image overlay feature by controlling transperency")
     base_file= st.file_uploader("Choose the base file")
     overlay_file=st.file_uploader("Choose the overlay file")
     if base_file and overlay_file:
@@ -59,8 +59,13 @@ def main_loop():
 
     st.divider()
 
+<<<<<<< HEAD
     learn_inf = load_learner('model_zeroloss.pkl')  
     st.subheader("Predicting ano color from an Image (Red,Blue,Black,Green)")
+=======
+    learn_inf = load_learner('model.pkl')  
+    st.subheader("Recognizing ano color from an Image (Red,Blue,Black,Green)")
+>>>>>>> 378dc8e2c61ec4f403d266f2beed67e68a9991ef
     pred_file = st.file_uploader("Choose the file to detect ano color")
     if pred_file:
         temp_dir = tempfile.mkdtemp()
