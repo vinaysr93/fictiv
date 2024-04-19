@@ -23,7 +23,7 @@ def overlay_image(image1,image2,alpha,x,y,rotation,re_size):
 def main_loop():
         
 
-    st.subheader("CAD Model and Actual Model Image overlay feature by controlling transperency")
+    st.subheader("CAD Model and Actual Model Image overlay feature by controlling transparency")
     base_file= st.file_uploader("Choose the base file")
     overlay_file=st.file_uploader("Choose the overlay file")
     if base_file and overlay_file:
