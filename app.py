@@ -13,7 +13,7 @@ def overlay_image(image1,image2,alpha,x,y,rotation,re_size):
     image2=image2.rotate(rotation)
     image2=image2.resize(re_size)
 
-    trans=int(alpha*255)
+    trans=int(alpha*255) # controlling the tranperency
     image2.putalpha(trans)
 
     image1.paste(image2,mask=image2,box=[x,y])
