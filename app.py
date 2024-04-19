@@ -59,7 +59,7 @@ def main_loop():
 
     st.divider()
 
-    learn_inf = load_learner('model_zeroloss.pkl')  
+    learn_inf = load_learner('model.pkl')  
     st.subheader("Recognizing ano color from an Image (Red,Blue,Black,Green)")
     pred_file = st.file_uploader("Choose the file to detect ano color")
     if pred_file:
