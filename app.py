@@ -59,13 +59,8 @@ def main_loop():
 
     st.divider()
 
-<<<<<<< HEAD
-    learn_inf = load_learner('model_zeroloss.pkl')  
-    st.subheader("Predicting ano color from an Image (Red,Blue,Black,Green)")
-=======
     learn_inf = load_learner('model.pkl')  
     st.subheader("Recognizing ano color from an Image (Red,Blue,Black,Green)")
->>>>>>> 378dc8e2c61ec4f403d266f2beed67e68a9991ef
     pred_file = st.file_uploader("Choose the file to detect ano color")
     if pred_file:
         temp_dir = tempfile.mkdtemp()
