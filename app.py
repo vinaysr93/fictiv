@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+
 from PIL import Image
 from fastbook import load_learner
 import tempfile
